@@ -477,7 +477,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
   /* такое подключение не сказывается на производительности */
 }
@@ -491,6 +493,11 @@ html {
   color: #102746;
 }
 
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
 .wrapper {
   max-width: 1060px;
   margin: 0 auto;
@@ -498,10 +505,10 @@ html {
 
 /* Header styles start */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .header__wrapper {
@@ -517,26 +524,150 @@ html {
   flex-wrap: wrap;
 }
 .header_item {
-    margin-right: 82px;
+  margin-right: 82px;
 }
 .header_item:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 .header__link {
-    font-size: 18px;
-    line-height: 24px;
-    color: white;
-    text-decoration: none;
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+  text-decoration: none;
 }
-.header__link:hover, .header__link:focus, .header__link:active {
-    opacity: 75%;
+.header__link:hover,
+.header__link:focus,
+.header__link:active {
+  opacity: 75%;
 }
 /* Header styles end */
 
 /* Intro styles start */
 .intro {
-    height: 100vh;
-    background: url(../img/svg/intro-bg.jpg) no-repeat center;
-    background-size: cover;
+  min-height: 100vh;
+  background: url(../img/svg/intro-bg.jpg) no-repeat center;
+  background-size: cover;
+  padding-top: 263px;
+}
+
+.intro__title {
+  max-width: 619px;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 60px;
+  color: white;
+  margin-bottom: 22px;
+}
+
+.intro__subtitle {
+  max-width: 546px;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 59px;
+}
+
+.search-form__info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search-form__field {
+  width: 297px;
+  background: transparent url(../img/svg/circle-icon.svg) no-repeat left 6px;
+  background-size: 20px;
+  border: 0;
+  border-bottom: 2px solid #bfc0c5;
+  margin-right: 60px;
+  padding-left: 43px;
+  padding-bottom: 22px;
+  font-size: 18px;
+  font-weight: 500px;
+  color: white;
+}
+
+.search-form__field::placeholder {
+  font-size: 18px;
+  font-weight: 500px;
+  color: white;
+}
+
+.search-form__submit {
+  padding: 15px 39px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 24px;
+  color: white;
+  background: #1b7dff;
+  border: 0;
+}
+
+.search-form__submit:hover,
+.search-form__submit:focus,
+.search-form__submit:active {
+  background: #085dcd;
 }
 /* Intro styles end */
+
+/* Benefits styles */
+.benefits__wrap {
+  max-width: 1262px;
+  background-color: white;
+  margin: auto;
+  box-shadow: 0px 2px 20px 0px #15182429;
+  position: relative;
+}
+
+.benefits__title {
+  width: 100%;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 42px;
+  padding: 93px 100px 88px 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  background-color: white;
+}
+
+.benefits__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 55px;
+  padding: 0 100px;
+}
+
+.benefits__card {
+  grid-column: span 1;
+}
+
+.benefits__card-pic {
+  max-width: 66px;
+  margin-bottom: 37px;
+}
+
+.benefits__card-thumb {
+  display: block;
+}
+.benefits__card-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 26px;
+}
+
+.benefits__card-desc {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 39px;
+}
+
+.benefits__card-more {
+  font-size: 16px;
+  line-height: 24px;
+  color: #006DFE;
+  text-decoration: none;
+}
+
+/* Benefits styles */
